@@ -114,7 +114,6 @@
 				41D81328E8E3FF319384A235 /* Pods-reactnativecleanarchitecture-reactnativecleanarchitectureTests.debug.xcconfig */,
 				4C84FCCF859BAE1BD3FBE664 /* Pods-reactnativecleanarchitecture-reactnativecleanarchitectureTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -485,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QV7TG58C79;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = reactnativecleanarchitecture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QV7TG58C79;
 				INFOPLIST_FILE = reactnativecleanarchitecture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

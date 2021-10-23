@@ -33,7 +33,7 @@ export default function RegisterScreen(){
                      options:{
                        topBar:{
                          title:{
-                           text:"IMUNN"
+                           text:"Home"
                          }
                        },
                        statusBar:{
