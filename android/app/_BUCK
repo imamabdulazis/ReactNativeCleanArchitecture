@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.reactnativecleanarchitecture",
+    package = "com.imam.react",
 )
 
 android_resource(
     name = "res",
-    package = "com.reactnativecleanarchitecture",
+    package = "com.imam.react",
     res = "src/main/res",
 )
 

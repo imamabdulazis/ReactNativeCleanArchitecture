@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "772935876206",
+    "project_id": "rncleanarchitecture",
+    "storage_bucket": "rncleanarchitecture.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772935876206:android:2c44b8750393a4f57d707f",
+        "android_client_info": {
+          "package_name": "com.imam.react"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772935876206-a4tv880081e77k85l2h43bdk96o9up0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCQzwDMplDT6I5lRFPNpwrkzYXERd8Wbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772935876206-a4tv880081e77k85l2h43bdk96o9up0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

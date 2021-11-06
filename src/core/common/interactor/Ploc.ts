@@ -4,8 +4,8 @@ export abstract class Ploc<S> {
   private internalState: S;
   private listeners: Subscription<S>[] = [];
 
-  constructor(initalState: S) {
-    this.internalState = initalState;
+  constructor(initialState: S) {
+    this.internalState = initialState;
   }
 
   public get state(): S {
