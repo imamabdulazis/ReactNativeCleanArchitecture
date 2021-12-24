@@ -1,5 +1,5 @@
-import {DataError} from '@core/common/interactor/DataError';
-import {Either} from '@core/common/interactor/Either';
+import {DataError} from '@core/interactor/DataError';
+import {Either} from '@core/interactor/Either';
 import {LoginDTO} from '@domain/entities/LoginDTO';
 import {LoginRepository} from '@domain/repository/LoginRepository';
 

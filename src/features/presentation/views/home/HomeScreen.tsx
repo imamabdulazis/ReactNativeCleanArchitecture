@@ -1,10 +1,10 @@
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 
 const HomeScreen = (props: any) => {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <View style={styles.container}>
       <TouchableOpacity
         onPress={() =>
           Navigation.push(props.componentId, {
@@ -23,7 +23,7 @@ const HomeScreen = (props: any) => {
             },
           })
         }>
-        <Text>NExt</Text>
+        <Text>Home Screen</Text>
       </TouchableOpacity>
     </View>
   );
@@ -31,4 +31,10 @@ const HomeScreen = (props: any) => {
 
 export default HomeScreen;
 
-// const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

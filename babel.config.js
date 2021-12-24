@@ -1,18 +1,23 @@
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
-  plugins:[
+  plugins: [
     [
       'module-resolver',
       {
-        root: ['./src'],
+        cwd: 'babelrc',
         extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
         alias: {
-          "@data": "./src/features/data",
-          "@domain": "./src/features/domain",
-          "@di": "./src/features/di",
-          "@presentation": "./src/features/presentation",
-        }
-      }
-   ]
-  ]
+          '@core': './src/core',
+          '@common': './src/core/common',
+          '@infra': './src/core/infra',
+          '@helper': './src/core/helper',
+          '@navigation': './src/core/navigation',
+          '@symbols': './src/core/symbols',
+          '@data': './src/feature/data',
+          '@domain': './src/features/domain',
+          '@presentation': './src/features/presentation',
+        },
+      },
+    ],
+  ],
 };

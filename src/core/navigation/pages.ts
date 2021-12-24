@@ -23,6 +23,10 @@ export const Pages = {
     id: 'SEARCH_SCREEN',
     name: 'SearchScreen',
   },
+  profile: {
+    id: 'PROFILE_SCREEN',
+    name: 'ProfileScreen',
+  },
   setting: {
     id: 'SETTING_SCREEN',
     name: 'SettingScreen',

@@ -1,4 +1,4 @@
-package com.reactnativecleanarchitecture;
+package com.imam.react;
 
 import com.reactnativenavigation.NavigationActivity;
 

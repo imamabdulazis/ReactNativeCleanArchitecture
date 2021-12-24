@@ -1,4 +1,4 @@
-package com.reactnativecleanarchitecture;
+package com.imam.react;
 
 import android.app.Application;
 import android.content.Context;
