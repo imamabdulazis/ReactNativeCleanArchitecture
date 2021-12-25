@@ -2,12 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@assets/*": ["src/assets/*"],
       "@core/*": ["src/core/*"],
       "@common/*": ["src/core/common/*"],
       "@infra/": ["src/core/infra/*"],
       "@helper/*": ["src/core/helper/*"],
       "@navigation/*": ["src/core/navigation/*"],
-      "@symbols/*": ["src/core/symbols/*"],
       "@data/*": ["src/feature/data/*"],
       "@domain/*": ["src/features/domain/*"],
       "@presentation/*": ["src/features/presentation/*"]

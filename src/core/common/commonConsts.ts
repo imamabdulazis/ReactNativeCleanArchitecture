@@ -6,11 +6,12 @@ import {
   StatusBar,
   StyleSheet,
 } from 'react-native';
+import Device from 'react-native-device-detection';
 
 const windowDimensions = Dimensions.get('window');
-export const isIos = Platform.OS === 'ios';
+export const isIos = Device.isIos;
 
-export const isAndroid = Platform.OS === 'android';
+export const isAndroid = Device.isAndroid;
 export const isAndroidLollipop =
   isAndroid && Platform.Version >= 21 && Platform.Version < 23;
 export const isAndroid11AndHigher = isAndroid && Platform.Version >= 30;

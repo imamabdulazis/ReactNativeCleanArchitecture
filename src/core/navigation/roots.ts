@@ -1,5 +1,5 @@
 import {getPlatformTabsIcon} from '@core/navigation/helpers/navigationIconHelpers';
-import {SFSymbols} from '@core/symbols/SFSymbols';
+import {SFSymbols} from '@assets/symbols/SFSymbols';
 import {Navigation} from 'react-native-navigation';
 import {Pages} from './pages';
 import {Tabs} from './tabs';
