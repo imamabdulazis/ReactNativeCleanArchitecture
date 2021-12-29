@@ -4,7 +4,7 @@ import {getStorybookUI} from '@storybook/react-native';
 import {PlatformColorsAndroid, PlatformColorsIOS} from '@core/common/color';
 import {isAndroid} from '@core/common/commonConsts';
 import {platformNativeColor} from '@core/helpers/colorHelpers';
-import {Pages} from './pages';
+import {Pages} from './constants/allPages';
 import SplashScreen from '@presentation/views/splash/SplashScreen';
 import OnBoardingScreen from '@presentation/views/onboarding/OnboardingScreen';
 import SettingScreen from '@presentation/views/setting/SettingScreen';
@@ -36,17 +36,17 @@ export function setDefaultOptions() {
       animate: true,
       drawBehind: !isAndroid,
       background: {
-        translucent: true,
+        translucent: false,
         color: platformNativeColor(
           PlatformColorsIOS.secondarySystemBackground,
-          PlatformColorsAndroid.navigation,
+          PlatformColorsAndroid.background,
         ),
       },
       title: {
-        color: platformNativeColor(
-          undefined,
-          PlatformColorsAndroid.onPrimaryText,
-        ),
+        // color: platformNativeColor(
+        //   undefined,
+        //   PlatformColorsAndroid.onPrimaryText,
+        // ),
       },
       largeTitle: {
         visible: false,
@@ -68,19 +68,20 @@ export function setDefaultOptions() {
         hideTopBarOnFocus: true,
         obscuresBackgroundDuringPresentation: true,
       },
-      hideNavBarOnFocusSearchBar: true,
+      hideNavBarOnFocusSearchBar: false,
       searchBarHiddenWhenScrolling: true,
       searchBarPlaceholder: 'Search',
       noBorder: false,
     },
     bottomTabs: {
       animate: false,
-      titleDisplayMode: 'showWhenActive',
-      hideShadow: false,
+      titleDisplayMode: 'alwaysShow',
+      hideShadow: true,
       translucent: true,
       animateTabSelection: false,
-      preferLargeIcons: false,
-      tabsAttachMode: 'together',
+      barStyle: 'default',
+      preferLargeIcons: true,
+      tabsAttachMode: 'afterInitialTab',
       backgroundColor: platformNativeColor(
         PlatformColorsIOS.secondarySystemBackground,
         PlatformColorsAndroid.background,

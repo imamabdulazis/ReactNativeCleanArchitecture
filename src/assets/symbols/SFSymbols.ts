@@ -2220,6 +2220,8 @@ export enum SFSymbols {
   'speedometer' = 'speedometer',
   'sportscourt' = 'sportscourt',
   'sportscourt.fill' = 'sportscourt.fill',
+  'suitcase.cart' = 'suitcase.cart',
+  'suitcase.cart.fill' = 'suitcase.cart.fill',
   'square' = 'square',
   'square.2.stack.3d' = 'square.2.stack.3d',
   'square.2.stack.3d.bottom.fill' = 'square.2.stack.3d.bottom.fill',

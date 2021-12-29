@@ -3,6 +3,16 @@ import {Colors, PlatformColorsAndroid} from '@common/color';
 import {isIos} from '@common/commonConsts';
 import {SFSymbols} from 'src/assets/symbols/SFSymbols';
 
+/**
+ * if using different icons between platform
+ *
+ * @param sfSymbol
+ * @param sfSelectedSymbol
+ * @param androidIcon
+ * @param androidSize
+ * @param androidColor
+ * @returns
+ */
 export function getPlatformTabsIcon(
   sfSymbol?: SFSymbols,
   sfSelectedSymbol?: SFSymbols,

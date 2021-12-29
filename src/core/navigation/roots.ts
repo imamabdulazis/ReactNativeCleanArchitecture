@@ -1,8 +1,10 @@
 import {getPlatformTabsIcon} from '@core/navigation/helpers/navigationIconHelpers';
 import {SFSymbols} from '@assets/symbols/SFSymbols';
 import {Navigation} from 'react-native-navigation';
-import {Pages} from './pages';
-import {Tabs} from './tabs';
+import {Pages} from './constants/allPages';
+import {MainTab} from './constants/mainTab';
+import {platformNativeColor} from '@core/helpers/colorHelpers';
+import {PlatformColorsAndroid, PlatformColorsIOS} from '@core/common/color';
 
 export function setStorybookRoot() {
   Navigation.setRoot({
@@ -63,18 +65,52 @@ export function setTabsRoot(callback?: () => void) {
         children: [
           {
             stack: {
-              id: Tabs.main.id,
+              id: MainTab.main.id,
               children: [
                 {
                   component: {
                     id: Pages.main.id,
                     name: Pages.main.name,
+                    options: {
+                      topBar: {
+                        rightButtons: [
+                          {
+                            id: 'qwrwerewrew',
+                            ...getPlatformTabsIcon(
+                              SFSymbols['house'],
+                              SFSymbols['house.fill'],
+                              'search',
+                            ),
+                          },
+                          {
+                            id: 'werwqrweqr',
+                            ...getPlatformTabsIcon(
+                              SFSymbols['house'],
+                              SFSymbols['house.fill'],
+                              'chat',
+                            ),
+                          },
+                        ],
+                        barStyle: 'black',
+                        hideOnScroll: true,
+                        title: {
+                          text: 'Facebook',
+                          fontWeight: 'bold',
+                          alignment: 'fill',
+                          fontSize: 20,
+                          color: platformNativeColor(
+                            PlatformColorsIOS.systemBlue,
+                            PlatformColorsAndroid.primary,
+                          ),
+                        },
+                      },
+                    },
                   },
                 },
               ],
               options: {
                 bottomTab: {
-                  text: 'home',
+                  text: 'News Feed',
                   ...getPlatformTabsIcon(
                     SFSymbols['house'],
                     SFSymbols['house.fill'],
@@ -84,10 +120,9 @@ export function setTabsRoot(callback?: () => void) {
               },
             },
           },
-
           {
             stack: {
-              id: Tabs.search.id,
+              id: MainTab.search.id,
               children: [
                 {
                   component: {
@@ -98,20 +133,42 @@ export function setTabsRoot(callback?: () => void) {
               ],
               options: {
                 bottomTab: {
-                  text: 'Search',
+                  text: 'Marketlace',
                   ...getPlatformTabsIcon(
-                    SFSymbols['magnifyingglass.circle'],
-                    SFSymbols['magnifyingglass.circle.fill'],
-                    'search',
+                    SFSymbols['suitcase.cart'],
+                    SFSymbols['suitcase.cart.fill'],
+                    'storefront',
                   ),
                 },
               },
             },
           },
-
           {
             stack: {
-              id: Tabs.settings.id,
+              id: MainTab.search.id,
+              children: [
+                {
+                  component: {
+                    id: Pages.search.id,
+                    name: Pages.search.name,
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  text: 'Profile',
+                  ...getPlatformTabsIcon(
+                    SFSymbols['person.circle'],
+                    SFSymbols['person.circle.fill'],
+                    'person-pin',
+                  ),
+                },
+              },
+            },
+          },
+          {
+            stack: {
+              id: MainTab.settings.id,
               children: [
                 {
                   component: {
@@ -122,11 +179,36 @@ export function setTabsRoot(callback?: () => void) {
               ],
               options: {
                 bottomTab: {
-                  text: 'Setting',
+                  badge: '10',
+                  animateBadge: true,
+                  text: 'Notifications',
                   ...getPlatformTabsIcon(
-                    SFSymbols['gearshape'],
-                    SFSymbols['gearshape.fill'],
-                    'settings',
+                    SFSymbols['bell'],
+                    SFSymbols['bell.fill'],
+                    'notifications',
+                  ),
+                },
+              },
+            },
+          },
+          {
+            stack: {
+              id: MainTab.settings.id,
+              children: [
+                {
+                  component: {
+                    id: Pages.setting.id,
+                    name: Pages.setting.name,
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  text: 'Menu',
+                  ...getPlatformTabsIcon(
+                    SFSymbols['line.horizontal.3.decrease'],
+                    SFSymbols['line.horizontal.3.decrease'],
+                    'menu',
                   ),
                 },
               },

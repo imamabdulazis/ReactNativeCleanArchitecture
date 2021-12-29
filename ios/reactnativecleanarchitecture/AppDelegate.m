@@ -5,7 +5,7 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 
-@import Firebase;
+//import Firebase;
 
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
@@ -38,7 +38,7 @@ static void InitializeFlipper(UIApplication *application) {
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
 [ReactNativeNavigation bootstrapWithBridge:bridge];
   
-  [FIRApp configure];
+//  [FIRApp configure];
 
   return YES;
 }

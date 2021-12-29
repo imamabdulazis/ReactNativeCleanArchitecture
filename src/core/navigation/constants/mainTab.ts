@@ -1,4 +1,4 @@
-export const Tabs = {
+export const MainTab = {
   main: {
     id: 'MAIN_TAB',
     name: 'MainTab',

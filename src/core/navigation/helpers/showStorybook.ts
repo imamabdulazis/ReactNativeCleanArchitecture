@@ -1,5 +1,5 @@
 import {Navigation} from 'react-native-navigation';
-import {Pages} from '../pages';
+import {Pages} from '../constants/allPages';
 
 export function showStorybook() {
   Navigation.showModal({
