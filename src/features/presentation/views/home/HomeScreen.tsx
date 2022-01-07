@@ -5,7 +5,7 @@ import {Navigation} from 'react-native-navigation';
 const HomeScreen = (props: any) => {
   return (
     <View style={styles.container}>
-      {/* <TouchableOpacity
+      <TouchableOpacity
         onPress={() =>
           Navigation.push(props.componentId, {
             component: {
@@ -24,7 +24,7 @@ const HomeScreen = (props: any) => {
           })
         }>
         <Text>Home Screen</Text>
-      </TouchableOpacity> */}
+      </TouchableOpacity>
     </View>
   );
 };

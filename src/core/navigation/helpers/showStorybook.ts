@@ -12,7 +12,7 @@ export function showStorybook() {
             options: {
               topBar: {
                 title: {
-                  text: 'Test',
+                  text: 'StoryBook',
                 },
               },
             },

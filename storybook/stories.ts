@@ -1,7 +1,6 @@
 if (__DEV__) {
-  require('./stories/Button');
-  require('./stories/CenterView');
-  require('./stories/Welcome');
+  require('./stories/Welcome.stories');
+  require('./stories/Button.stories');
 }
 
 export {};

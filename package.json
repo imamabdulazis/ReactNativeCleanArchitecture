@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "iphone8": "react-native run-ios --simulator=\"iPhone 8\"",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint --ext .tsx --ext .ts src/",
