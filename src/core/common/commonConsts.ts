@@ -9,6 +9,7 @@ import {
 import Device from 'react-native-device-detection';
 
 const windowDimensions = Dimensions.get('window');
+export const screenDimensions = Dimensions.get('screen');
 export const isIos = Device.isIos;
 
 export const isAndroid = Device.isAndroid;
