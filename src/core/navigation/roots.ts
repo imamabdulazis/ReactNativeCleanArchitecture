@@ -73,31 +73,31 @@ export function setTabsRoot(callback?: () => void) {
                     name: Pages.main.name,
                     options: {
                       topBar: {
-                        rightButtons: [
-                          {
-                            id: 'qwrwerewrew',
-                            ...getPlatformTabsIcon(
-                              SFSymbols['house'],
-                              SFSymbols['house.fill'],
-                              'search',
-                            ),
-                          },
-                          {
-                            id: 'werwqrweqr',
-                            ...getPlatformTabsIcon(
-                              SFSymbols['house'],
-                              SFSymbols['house.fill'],
-                              'chat',
-                            ),
-                          },
-                        ],
-                        barStyle: 'black',
+                        // rightButtons: [
+                        //   {
+                        //     id: 'qwrwerewrew',
+                        //     ...getPlatformTabsIcon(
+                        //       SFSymbols['house'],
+                        //       SFSymbols['house.fill'],
+                        //       'search',
+                        //     ),
+                        //   },
+                        //   {
+                        //     id: 'werwqrweqr',
+                        //     ...getPlatformTabsIcon(
+                        //       SFSymbols['house'],
+                        //       SFSymbols['house.fill'],
+                        //       'chat',
+                        //     ),
+                        //   },
+                        // ],
+                        barStyle: 'default',
                         hideOnScroll: true,
                         title: {
                           text: 'Facebook',
                           fontWeight: 'bold',
                           alignment: 'fill',
-                          fontSize: 20,
+                          fontSize: 25,
                           color: platformNativeColor(
                             PlatformColorsIOS.systemBlue,
                             PlatformColorsAndroid.primary,

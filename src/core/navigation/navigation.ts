@@ -35,32 +35,32 @@ export function setDefaultOptions() {
     topBar: {
       animate: true,
       drawBehind: !isAndroid,
-      background: {
-        translucent: false,
-        color: platformNativeColor(
-          PlatformColorsIOS.secondarySystemBackground,
-          PlatformColorsAndroid.background,
-        ),
-      },
-      title: {
-        // color: platformNativeColor(
-        //   undefined,
-        //   PlatformColorsAndroid.onPrimaryText,
-        // ),
-      },
+      // background: {
+      //   translucent: false,
+      //   color: platformNativeColor(
+      //     PlatformColorsIOS.systemFill,
+      //     PlatformColorsAndroid.background,
+      //   ),
+      // },
+      // title: {
+      //   color: platformNativeColor(
+      //     undefined,
+      //     PlatformColorsAndroid.onPrimaryText,
+      //   ),
+      // },
       largeTitle: {
         visible: false,
       },
       scrollEdgeAppearance: {
         active: true,
         noBorder: true,
-        background: {
-          translucent: true,
-          color: platformNativeColor(
-            PlatformColorsIOS.secondarySystemBackground,
-            PlatformColorsAndroid.navigation,
-          ),
-        },
+        // background: {
+        //   translucent: true,
+        //   color: platformNativeColor(
+        //     PlatformColorsIOS.secondarySystemBackground,
+        //     PlatformColorsAndroid.navigation,
+        //   ),
+        // },
       },
       searchBar: {
         visible: false,
