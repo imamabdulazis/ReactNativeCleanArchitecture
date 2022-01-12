@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.primary,
     borderRadius: 10,
     padding: 10,
+    opacity: 0.5,
   },
   titleNewAccount: {
     color: Colors.white,
