@@ -2,7 +2,6 @@ import {Platform} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 import {getStorybookUI} from '@storybook/react-native';
 import {PlatformColorsAndroid, PlatformColorsIOS} from '@core/common/color';
-import {isAndroid} from '@core/common/commonConsts';
 import {platformNativeColor} from '@core/helpers/colorHelpers';
 import {Pages} from './constants/allPages';
 import SplashScreen from '@presentation/views/splash/SplashScreen';
@@ -34,7 +33,7 @@ export function setDefaultOptions() {
     },
     topBar: {
       animate: true,
-      drawBehind: !isAndroid,
+      drawBehind: false,
       // background: {
       //   translucent: false,
       //   color: platformNativeColor(

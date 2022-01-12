@@ -1,27 +1,49 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StatusBar, StyleSheet, Text, TextInput, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 
 import {screenDimensions} from '@core/common/commonConsts';
 import {Colors} from '@core/common/color';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {setTabsRoot} from '@core/navigation/roots';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const headerSource = require('../../../../assets/images/header-login.jpeg');
 
 const LoginScreen = () => {
+  const [email, setemail] = useState('');
+  const [pass, setpass] = useState('');
+
+  const login = async () => {
+    if (email === 'test' && pass === 'test') {
+      setTabsRoot();
+      await AsyncStorage.setItem('login', 'true');
+    } else {
+      console.log('Email or password incorrect');
+    }
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle={'light-content'} />
       <FastImage source={headerSource} style={styles.headerLogin} />
       <View style={styles.inputArea}>
-        <TextInput placeholder="Phone number or email" style={styles.input} />
+        <TextInput
+          placeholder="Phone number or email"
+          style={styles.input}
+          onChangeText={setemail}
+        />
 
         <View style={styles.divider} />
 
-        <TextInput placeholder="Password" style={styles.input} />
+        <TextInput
+          placeholder="Password"
+          style={styles.input}
+          onChangeText={setpass}
+        />
       </View>
       <View style={styles.centerButton}>
-        <TouchableOpacity style={styles.loginButton}>
+        <TouchableOpacity onPress={login} style={styles.loginButton}>
           <Text style={styles.titleButton}>Log in</Text>
         </TouchableOpacity>
         <View style={styles.spacer} />

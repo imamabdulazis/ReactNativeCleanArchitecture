@@ -1,16 +1,27 @@
 import {Colors} from '@core/common/color';
 import {screenDimensions} from '@core/common/commonConsts';
-import {setAuthenticationRoot} from '@core/navigation/roots';
+import {setAuthenticationRoot, setTabsRoot} from '@core/navigation/roots';
 import React from 'react';
 import {useEffect} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {NavigationFunctionComponent} from 'react-native-navigation';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SplashScreen: NavigationFunctionComponent = () => {
   useEffect(() => {
-    setTimeout(() => {
-      setAuthenticationRoot();
-    }, 1000);
+    (async function () {
+      const isLogin = AsyncStorage.getItem('@login');
+
+      if (isLogin !== null) {
+        setTimeout(() => {
+          setTabsRoot();
+        }, 1000);
+      } else {
+        setTimeout(() => {
+          setAuthenticationRoot();
+        }, 1000);
+      }
+    })();
   }, []);
 
   return (
