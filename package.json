@@ -20,6 +20,7 @@
     "react-native": "0.64.2",
     "react-native-dev-menu": "^4.0.2",
     "react-native-device-detection": "^0.2.1",
+    "react-native-fast-image": "^8.5.11",
     "react-native-gesture-handler": "^2.1.0",
     "react-native-navigation": "^7.21.0",
     "react-native-orientation-locker": "^1.4.0",

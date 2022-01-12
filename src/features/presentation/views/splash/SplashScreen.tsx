@@ -1,6 +1,6 @@
 import {Colors} from '@core/common/color';
 import {screenDimensions} from '@core/common/commonConsts';
-import {setTabsRoot} from '@core/navigation/roots';
+import {setAuthenticationRoot} from '@core/navigation/roots';
 import React from 'react';
 import {useEffect} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
@@ -9,7 +9,7 @@ import {NavigationFunctionComponent} from 'react-native-navigation';
 const SplashScreen: NavigationFunctionComponent = () => {
   useEffect(() => {
     setTimeout(() => {
-      setTabsRoot();
+      setAuthenticationRoot();
     }, 1000);
   }, []);
 

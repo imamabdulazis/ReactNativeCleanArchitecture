@@ -7,9 +7,13 @@ export const Pages = {
     id: 'SPLASH_SCREEN',
     name: 'SplashScreen',
   },
-  onboarding: {
-    id: 'ONBOARDING',
-    name: 'OnBoardingScreen',
+  login: {
+    id: 'LOGIN',
+    name: 'LoginScreen',
+  },
+  signup: {
+    id: 'SIGNUP',
+    name: 'SignUpScreen',
   },
   tabs: {
     id: 'BOTTOM_TABS',

@@ -6,11 +6,11 @@ import {isAndroid} from '@core/common/commonConsts';
 import {platformNativeColor} from '@core/helpers/colorHelpers';
 import {Pages} from './constants/allPages';
 import SplashScreen from '@presentation/views/splash/SplashScreen';
-import OnBoardingScreen from '@presentation/views/onboarding/OnboardingScreen';
 import SettingScreen from '@presentation/views/setting/SettingScreen';
 import ProfileScreen from '@presentation/views/profile/ProfileScreen';
 import SearchScreen from '@presentation/views/search/SearchScreen';
 import HomeScreen from '@presentation/views/home/HomeScreen';
+import LoginScreen from '@presentation/views/login/LoginScreen';
 
 const StorybookUIRoot = getStorybookUI({
   asyncStorage: null,
@@ -124,14 +124,16 @@ export function setDefaultOptions() {
     },
   });
 }
-
+/**
+ * Register all screen here
+ */
 export function registerComponent() {
   if (__DEV__) {
     Navigation.registerComponent(Pages.storybook.name, () => StorybookUIRoot);
   }
 
   Navigation.registerComponent(Pages.splash.name, () => SplashScreen);
-  Navigation.registerComponent(Pages.onboarding.name, () => OnBoardingScreen);
+  Navigation.registerComponent(Pages.login.name, () => LoginScreen);
   Navigation.registerComponent(Pages.main.name, () => HomeScreen);
   Navigation.registerComponent(Pages.search.name, () => SearchScreen);
   Navigation.registerComponent(Pages.setting.name, () => SettingScreen);

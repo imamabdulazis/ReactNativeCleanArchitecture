@@ -1,31 +1,11 @@
 import {Colors} from '@core/common/color';
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {Navigation} from 'react-native-navigation';
+import {StyleSheet, Text, View} from 'react-native';
 
-const HomeScreen = (props: any) => {
+const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        onPress={() =>
-          Navigation.push(props.componentId, {
-            component: {
-              name: 'SettingScreen',
-              options: {
-                topBar: {
-                  title: {
-                    text: 'Test',
-                  },
-                  backButton: {
-                    title: 'Home',
-                  },
-                },
-              },
-            },
-          })
-        }>
-        <Text>Home Screen</Text>
-      </TouchableOpacity>
+      <Text>Home</Text>
     </View>
   );
 };
@@ -37,6 +17,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.bgMain,
   },
 });

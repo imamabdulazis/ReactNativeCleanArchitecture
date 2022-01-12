@@ -41,12 +41,12 @@ export function setInitialRoot() {
   });
 }
 
-export function setOnBoarding() {
+export function setAuthenticationRoot() {
   Navigation.setRoot({
     root: {
       component: {
-        name: Pages.onboarding.name,
-        id: Pages.onboarding.id,
+        id: Pages.login.name,
+        name: Pages.login.name,
         options: {
           topBar: {
             visible: false,

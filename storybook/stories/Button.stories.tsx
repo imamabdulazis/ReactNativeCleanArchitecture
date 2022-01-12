@@ -1,6 +1,7 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react-native';
-import Button from '../components/Button/Button';
+import ContainButton from '../components/Button/ContainButton';
+import SemiContainButton from '../components/Button/SemiContainButton';
 import {CenterView} from '../components/CenterView';
 import {withKnobs} from '@storybook/addon-knobs';
 
@@ -10,4 +11,9 @@ ButtonStories.addDecorator(getStory => (
   <CenterView>{getStory()}</CenterView>
 )).addDecorator(withKnobs);
 
-ButtonStories.add('Sample Button', () => <Button>Sample Button</Button>);
+ButtonStories.add('Contain Button', () => (
+  <ContainButton>Log in</ContainButton>
+));
+ButtonStories.add('Semi Contain Button', () => (
+  <SemiContainButton>Log in</SemiContainButton>
+));
