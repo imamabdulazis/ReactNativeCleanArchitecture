@@ -8,7 +8,7 @@ const UserPostContainer = () => {
   const [onChange, setOnChange] = useState('');
 
   useEffect(() => {
-    console.log(onChange);
+    // console.log(onChange);
   }, [onChange]);
 
   return (
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
   },
   avatar: {
     borderRadius: 50,
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
     overflow: 'hidden',
   },
   postInput: {

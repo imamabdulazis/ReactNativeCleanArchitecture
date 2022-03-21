@@ -3,8 +3,8 @@ import {SFSymbols} from '@assets/symbols/SFSymbols';
 import {Navigation} from 'react-native-navigation';
 import {Pages} from './constants/allPages';
 import {MainTab} from './constants/mainTab';
-import {platformNativeColor} from '@core/helpers/colorHelpers';
-import {PlatformColorsAndroid, PlatformColorsIOS} from '@core/common/color';
+// import {platformNativeColor} from '@core/helpers/colorHelpers';
+// import {PlatformColorsAndroid, PlatformColorsIOS} from '@core/common/color';
 
 export function setStorybookRoot() {
   Navigation.setRoot({
@@ -69,55 +69,11 @@ export function setTabsRoot(callback?: () => void) {
               children: [
                 {
                   component: {
-                    id: Pages.main.id,
-                    name: Pages.main.name,
-                    options: {
-                      topBar: {
-                        // rightButtons: [
-                        //   {
-                        //     id: 'qwrwerewrew',
-                        //     ...getPlatformTabsIcon(
-                        //       SFSymbols['house'],
-                        //       SFSymbols['house.fill'],
-                        //       'search',
-                        //     ),
-                        //   },
-                        //   {
-                        //     id: 'werwqrweqr',
-                        //     ...getPlatformTabsIcon(
-                        //       SFSymbols['house'],
-                        //       SFSymbols['house.fill'],
-                        //       'chat',
-                        //     ),
-                        //   },
-                        // ],
-                        barStyle: 'default',
-                        hideOnScroll: true,
-                        title: {
-                          text: 'Facebook',
-                          fontWeight: 'bold',
-                          alignment: 'fill',
-                          fontSize: 25,
-                          color: platformNativeColor(
-                            PlatformColorsIOS.systemBlue,
-                            PlatformColorsAndroid.primary,
-                          ),
-                        },
-                      },
-                    },
+                    id: Pages.home.id,
+                    name: Pages.home.name,
                   },
                 },
               ],
-              options: {
-                bottomTab: {
-                  text: 'News Feed',
-                  ...getPlatformTabsIcon(
-                    SFSymbols['house'],
-                    SFSymbols['house.fill'],
-                    'home',
-                  ),
-                },
-              },
             },
           },
           {
@@ -183,7 +139,7 @@ export function setTabsRoot(callback?: () => void) {
                   animateBadge: true,
                   text: 'Notifications',
                   ...getPlatformTabsIcon(
-                    SFSymbols['bell'],
+                    SFSymbols.bell,
                     SFSymbols['bell.fill'],
                     'notifications',
                   ),

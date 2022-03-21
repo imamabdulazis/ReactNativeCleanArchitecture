@@ -2,30 +2,39 @@ import {Colors} from '@core/common/color';
 import {screenDimensions} from '@core/common/commonConsts';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import Entypo from 'react-native-vector-icons/Entypo';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const PostCategoryContainer = () => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button}>
-        <Entypo name={'video-camera'} size={20} color={Colors.red} />
-        <Text style={styles.titleButton}>Live</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <MaterialIcons name={'photo-library'} size={20} color={Colors.green} />
-        <Text style={styles.titleButton}>Photo</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <MaterialCommunityIcons
-          name={'video-plus'}
-          size={25}
-          color={'purple'}
-        />
-        <Text style={styles.titleButton}>Room</Text>
-      </TouchableOpacity>
+      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+        <TouchableOpacity style={styles.button}>
+          <Entypo name={'instagram'} size={17} color={Colors.red} />
+          <Text style={styles.titleButton}>Reels</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <MaterialCommunityIcons
+            name={'video-plus'}
+            size={20}
+            color={'purple'}
+          />
+          <Text style={styles.titleButton}>Room</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <MaterialCommunityIcons
+            name={'account-group'}
+            size={20}
+            color={Colors.blue}
+          />
+          <Text style={styles.titleButton}>Group</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Entypo name={'video-camera'} size={17} color={Colors.red} />
+          <Text style={styles.titleButton}>Live</Text>
+        </TouchableOpacity>
+      </ScrollView>
     </View>
   );
 };
@@ -35,16 +44,21 @@ export default PostCategoryContainer;
 const styles = StyleSheet.create({
   container: {
     width: screenDimensions.width,
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.bgGrey,
     justifyContent: 'space-evenly',
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 1,
+    paddingVertical: 10,
   },
   button: {
-    padding: 15,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: Colors.white,
+    borderRadius: 20,
+    marginRight: 5,
+    marginLeft: 10,
   },
   titleButton: {
     fontWeight: '700',

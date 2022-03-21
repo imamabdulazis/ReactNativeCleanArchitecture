@@ -1,8 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {NavigationFunctionComponent} from 'react-native-navigation';
 
-const SearchScreen: NavigationFunctionComponent = () => {
+const SearchScreen = () => {
   return (
     <View>
       <Text>Search</Text>

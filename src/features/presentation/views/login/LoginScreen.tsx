@@ -19,7 +19,7 @@ const LoginScreen = () => {
       setTabsRoot();
       await AsyncStorage.setItem('login', 'true');
     } else {
-      console.log('Email or password incorrect');
+      // console.log('Email or password incorrect');
     }
   };
 

@@ -18,6 +18,5 @@ export default PostContainer;
 const styles = StyleSheet.create({
   container: {
     width: screenDimensions.width,
-    marginVertical: 1,
   },
 });

@@ -10,6 +10,8 @@ import ProfileScreen from '@presentation/views/profile/ProfileScreen';
 import SearchScreen from '@presentation/views/search/SearchScreen';
 import HomeScreen from '@presentation/views/home/HomeScreen';
 import LoginScreen from '@presentation/views/login/LoginScreen';
+import SearchButton from '@presentation/components/SearchButton';
+import ChatButton from '@presentation/components/ChatButton';
 
 const StorybookUIRoot = getStorybookUI({
   asyncStorage: null,
@@ -33,7 +35,7 @@ export function setDefaultOptions() {
     },
     topBar: {
       animate: true,
-      drawBehind: false,
+      drawBehind: true,
       // background: {
       //   translucent: false,
       //   color: platformNativeColor(
@@ -61,15 +63,6 @@ export function setDefaultOptions() {
         //   ),
         // },
       },
-      searchBar: {
-        visible: false,
-        hideOnScroll: true,
-        hideTopBarOnFocus: true,
-        obscuresBackgroundDuringPresentation: true,
-      },
-      hideNavBarOnFocusSearchBar: false,
-      searchBarHiddenWhenScrolling: true,
-      searchBarPlaceholder: 'Search',
       noBorder: false,
     },
     bottomTabs: {
@@ -133,8 +126,12 @@ export function registerComponent() {
 
   Navigation.registerComponent(Pages.splash.name, () => SplashScreen);
   Navigation.registerComponent(Pages.login.name, () => LoginScreen);
-  Navigation.registerComponent(Pages.main.name, () => HomeScreen);
+  Navigation.registerComponent(Pages.home.name, () => HomeScreen);
   Navigation.registerComponent(Pages.search.name, () => SearchScreen);
   Navigation.registerComponent(Pages.setting.name, () => SettingScreen);
   Navigation.registerComponent(Pages.profile.name, () => ProfileScreen);
+
+  //component
+  Navigation.registerComponent('SearchButtonComponent', () => SearchButton);
+  Navigation.registerComponent('ChatButtonComponent', () => ChatButton);
 }

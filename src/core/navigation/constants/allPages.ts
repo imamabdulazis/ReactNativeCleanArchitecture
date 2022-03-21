@@ -23,6 +23,10 @@ export const Pages = {
     id: 'MAIN_SCREEN',
     name: 'MainScreen',
   },
+  home: {
+    id: 'HOME_SCREEN',
+    name: 'HomeScreen',
+  },
   search: {
     id: 'SEARCH_SCREEN',
     name: 'SearchScreen',
