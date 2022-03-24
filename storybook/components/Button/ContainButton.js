@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {StyleSheet, Text, TouchableHighlight} from 'react-native';
-import {screenDimensions} from '@core/common/commonConsts';
-import {Colors} from '@core/common/color';
+import {screenDimensions} from '@components/common/commonConsts';
+import {Colors} from '@components/common/color';
 
 export default function ContainButton({onPress, children}) {
   return (

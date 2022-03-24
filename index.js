@@ -10,7 +10,7 @@ if (__DEV__) {
   }, module);
 
   const DevMenu = require('react-native-dev-menu');
-  const {showStorybook} = require('@navigation/helpers/showStorybook');
+  const {showStorybook} = require('./src/navigation/helpers/showStorybook');
   DevMenu.addItem('Storybook', showStorybook);
 }
 

@@ -1,10 +1,7 @@
 import {Navigation} from 'react-native-navigation';
-import {setInitialRoot} from '@core/navigation/roots';
-import {
-  registerComponent,
-  setDefaultOptions,
-} from '@core/navigation/navigation';
-import {setDefaultOrientation} from '@core/navigation/helpers/orientationHelpers';
+import {setInitialRoot} from '@navigation/roots';
+import {registerComponent, setDefaultOptions} from '@navigation/navigation';
+import {setDefaultOrientation} from '@navigation/helpers/orientationHelpers';
 
 export const initializeApp = () => {
   registerComponent();
