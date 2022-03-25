@@ -3,9 +3,11 @@ import {StyleSheet, TextInput, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {screenDimensions} from '@components/common/commonConsts';
 import {Colors} from '@components/common/color';
+import {useTranslation} from 'react-i18next';
 
 const UserPostContainer = () => {
   const [onChange, setOnChange] = useState('');
+  const {t} = useTranslation();
 
   useEffect(() => {
     // console.log(onChange);
@@ -22,7 +24,7 @@ const UserPostContainer = () => {
       <TextInput
         style={styles.postInput}
         onChangeText={setOnChange}
-        placeholder="What`s on your mind?"
+        placeholder={t('What`s on your mind?')}
       />
     </View>
   );

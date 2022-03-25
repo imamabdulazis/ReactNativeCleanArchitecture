@@ -15,6 +15,7 @@ import {
 } from '@components/common/color';
 import SearchButton from '@components/general/SearchButton';
 import ChatButton from '@components/general/ChatButton';
+import {WrappedComponent} from '../hoc';
 
 const StorybookUIRoot = getStorybookUI({
   asyncStorage: null,
@@ -120,21 +121,50 @@ export function setDefaultOptions() {
   });
 }
 /**
- * Register all screen here
+ * Register all screen and components
  */
 export function registerComponent() {
   if (__DEV__) {
     Navigation.registerComponent(Pages.storybook.name, () => StorybookUIRoot);
   }
 
-  Navigation.registerComponent(Pages.splash.name, () => SplashScreen);
-  Navigation.registerComponent(Pages.login.name, () => LoginScreen);
-  Navigation.registerComponent(Pages.home.name, () => HomeScreen);
-  Navigation.registerComponent(Pages.search.name, () => SearchScreen);
-  Navigation.registerComponent(Pages.setting.name, () => SettingScreen);
-  Navigation.registerComponent(Pages.profile.name, () => ProfileScreen);
+  /**
+   * register all screen
+   */
+  Navigation.registerComponent(
+    Pages.splash.name,
+    () => WrappedComponent(SplashScreen),
+    () => SplashScreen,
+  );
+  Navigation.registerComponent(
+    Pages.login.name,
+    () => WrappedComponent(LoginScreen),
+    () => LoginScreen,
+  );
+  Navigation.registerComponent(
+    Pages.home.name,
+    () => WrappedComponent(HomeScreen),
+    () => HomeScreen,
+  );
+  Navigation.registerComponent(
+    Pages.search.name,
+    () => WrappedComponent(SearchScreen),
+    () => SearchScreen,
+  );
+  Navigation.registerComponent(
+    Pages.setting.name,
+    () => WrappedComponent(SettingScreen),
+    () => SettingScreen,
+  );
+  Navigation.registerComponent(
+    Pages.profile.name,
+    () => WrappedComponent(ProfileScreen),
+    () => ProfileScreen,
+  );
 
-  //component
+  /**
+   * register all custom components
+   */
   Navigation.registerComponent('SearchButtonComponent', () => SearchButton);
   Navigation.registerComponent('ChatButtonComponent', () => ChatButton);
 }
