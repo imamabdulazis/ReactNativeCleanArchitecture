@@ -8,7 +8,7 @@ import {Colors} from '@components/common/color';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const SearchButton = (props: {
-  onClick: ((event: GestureResponderEvent) => void) | undefined;
+  onClick?: ((event: GestureResponderEvent) => void) | undefined;
 }) => {
   return (
     <TouchableOpacity onPress={props.onClick} style={styles.button}>

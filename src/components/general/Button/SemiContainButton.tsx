@@ -4,7 +4,7 @@ import {StyleSheet, Text, TouchableHighlight} from 'react-native';
 import {screenDimensions} from '@components/common/commonConsts';
 import {Colors} from '@components/common/color';
 
-export default function ContainButton({onPress, children}) {
+export default function SemiContainButton({onPress, children}: any) {
   return (
     <TouchableHighlight style={styles.button} onPress={onPress}>
       <Text style={styles.title}>{children}</Text>
@@ -12,12 +12,12 @@ export default function ContainButton({onPress, children}) {
   );
 }
 
-ContainButton.defaultProps = {
+SemiContainButton.defaultProps = {
   children: null,
   onPress: () => {},
 };
 
-ContainButton.propTypes = {
+SemiContainButton.propTypes = {
   children: PropTypes.node,
   onPress: PropTypes.func,
 };
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.primary,
     borderRadius: 10,
     padding: 10,
+    opacity: 0.5,
   },
   title: {
     color: 'white',

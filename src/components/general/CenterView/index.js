@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {View} from 'react-native';
 import style from './style';
 
-export function CenterView({children}) {
+export function CenterView({children}: any) {
   return <View style={style.main}>{children}</View>;
 }
 
