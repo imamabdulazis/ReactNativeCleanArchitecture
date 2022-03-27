@@ -6,7 +6,7 @@ import {Colors} from '@components/common/color';
 
 const StoryCard = ({isCreateStory = false}: any) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container}>
       <Image
         source={{
           uri: 'https://media.istockphoto.com/photos/image-projection-on-a-woman-using-a-smart-phone-picture-id1341661060?s=612x612',
@@ -23,7 +23,7 @@ const StoryCard = ({isCreateStory = false}: any) => {
       ) : (
         <Text style={styles.name}>StoryCard</Text>
       )}
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -13,8 +13,8 @@ import {
   PlatformColorsAndroid,
   PlatformColorsIOS,
 } from '@components/common/color';
-import SearchButton from '@components/general/SearchButton';
-import ChatButton from '@components/general/ChatButton';
+import SearchButton from '@components/general/Button/SearchButton';
+import ChatButton from '@components/general/Button/ChatButton';
 import {WrappedComponent} from '../hoc';
 
 const StorybookUIRoot = getStorybookUI({

@@ -1,5 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {Button, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
+import {useTranslation} from 'react-i18next';
+
 import {getPlatformTabsIcon} from '@navigation/helpers/navigationIconHelpers';
 import PostContainer from './components/PostContainer';
 import {SFSymbols} from '@assets/symbols/SFSymbols';
@@ -11,19 +13,11 @@ import {
   PlatformColorsAndroid,
   PlatformColorsIOS,
 } from '@components/common/color';
-import {useTranslationContext} from '@contexts/translationContext/TranslationContext';
-import {useTranslation} from 'react-i18next';
 
 const HomeScreen = (props: any) => {
   const {componentId} = props;
   const {t} = useTranslation();
-  const {switchLang} = useTranslationContext();
-
   const [isSearch, setIsSearch] = useState(false);
-
-  const onSwitchLang = (lang: string) => {
-    switchLang(lang);
-  };
 
   const onClickSearchButton = useCallback(() => {
     setIsSearch(!isSearch);
@@ -57,22 +51,21 @@ const HomeScreen = (props: any) => {
     });
   }, [onClickSearchButton, isSearch, componentId]);
 
+  /**
+   * Change Language
+   */
+  useEffect(() => {
+    Navigation.mergeOptions(componentId, {
+      bottomTab: {
+        text: t('Home'),
+      },
+    });
+  }, [t, componentId]);
+
   console.log(t('Hello World'));
 
   return (
     <View style={styles.container}>
-      <Text style={{color: 'red'}}>{t('Hello World')}</Text>
-      <View
-        style={{
-          alignItems: 'center',
-          marginTop: 100,
-          justifyContent: 'center',
-        }}>
-        <Button title="ENGLISH" onPress={() => onSwitchLang('en')} />
-        <Button title="JAPAN" onPress={() => onSwitchLang('ja')} />
-        <Button title="FRANCE" onPress={() => onSwitchLang('fr')} />
-        <Button title="INDO" onPress={() => onSwitchLang('id')} />
-      </View>
       <ScrollView>
         <PostContainer />
         <StoryContainer />
@@ -105,7 +98,6 @@ HomeScreen.options = () => ({
     },
   },
   bottomTab: {
-    text: 'News Feed',
     ...getPlatformTabsIcon(SFSymbols.house, SFSymbols['house.fill'], 'home'),
   },
 });
