@@ -42,14 +42,14 @@ const HomeScreen = (props: any) => {
             component: {
               name: 'SearchButtonComponent',
               passProps: {
-                onClick: () => onClickSearchButton(),
+                onClick: onClickSearchButton,
               },
             },
           },
         ],
       },
     });
-  }, [onClickSearchButton, isSearch, componentId]);
+  }, [componentId, onClickSearchButton, isSearch]);
 
   /**
    * Change Language
@@ -61,8 +61,6 @@ const HomeScreen = (props: any) => {
       },
     });
   }, [t, componentId]);
-
-  console.log(t('Hello World'));
 
   return (
     <View style={styles.container}>

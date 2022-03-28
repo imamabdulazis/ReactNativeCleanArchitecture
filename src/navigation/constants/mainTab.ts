@@ -3,12 +3,20 @@ export const MainTab = {
     id: 'MAIN_TAB',
     name: 'MainTab',
   },
-  search: {
-    id: 'SEARCH_TAB',
-    name: 'SearchTab',
+  marketPlace: {
+    id: 'MARKETPLACE_TAB',
+    name: 'MarketPlaceTab',
   },
-  settings: {
-    id: 'SETTING_TAB',
-    name: 'SettingTab',
+  profile: {
+    id: 'PROFILE_TAB',
+    name: 'ProfileTab',
+  },
+  notification: {
+    id: 'NOTIFICATION_TAB',
+    name: 'NotificationTab',
+  },
+  menu: {
+    id: 'MENU_TAB',
+    name: 'MenuTab',
   },
 };
