@@ -35,6 +35,14 @@ export const Pages = {
     id: 'PROFILE_SCREEN',
     name: 'ProfileScreen',
   },
+  notification: {
+    id: 'NOTIFICATION_SCREEN',
+    name: 'NotificationScreen',
+  },
+  menu: {
+    id: 'MENU_SCREEN',
+    name: 'MenuScreen',
+  },
   setting: {
     id: 'SETTING_SCREEN',
     name: 'SettingScreen',

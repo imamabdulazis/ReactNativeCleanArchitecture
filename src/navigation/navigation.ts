@@ -16,6 +16,9 @@ import {
 import SearchButton from '@components/general/Button/SearchButton';
 import ChatButton from '@components/general/Button/ChatButton';
 import {WrappedComponent} from '../hoc';
+import NotificationScreen from '../screens/notification/NotificationScreen';
+import SettingButton from '../components/general/Button/SettingButton';
+import MenuScreen from '../screens/menu/MenuScreen';
 
 const StorybookUIRoot = getStorybookUI({
   asyncStorage: null,
@@ -40,6 +43,9 @@ export function setDefaultOptions() {
     topBar: {
       animate: true,
       drawBehind: true,
+      backButton: {
+        showTitle: false,
+      },
       // background: {
       //   translucent: false,
       //   color: platformNativeColor(
@@ -53,9 +59,9 @@ export function setDefaultOptions() {
       //     PlatformColorsAndroid.onPrimaryText,
       //   ),
       // },
-      largeTitle: {
-        visible: false,
-      },
+      // largeTitle: {
+      //   visible: false,
+      // },
       scrollEdgeAppearance: {
         active: true,
         noBorder: true,
@@ -152,19 +158,31 @@ export function registerComponent() {
     () => SearchScreen,
   );
   Navigation.registerComponent(
-    Pages.setting.name,
-    () => WrappedComponent(SettingScreen),
-    () => SettingScreen,
+    Pages.notification.name,
+    () => WrappedComponent(NotificationScreen),
+    () => NotificationScreen,
   );
   Navigation.registerComponent(
     Pages.profile.name,
     () => WrappedComponent(ProfileScreen),
     () => ProfileScreen,
   );
+  Navigation.registerComponent(
+    Pages.setting.name,
+    () => WrappedComponent(SettingScreen),
+    () => SettingScreen,
+  );
+  Navigation.registerComponent(
+    Pages.menu.name,
+    () => WrappedComponent(MenuScreen),
+    () => MenuScreen,
+  );
 
   /**
    * register all custom components
    */
+  //button
   Navigation.registerComponent('SearchButtonComponent', () => SearchButton);
   Navigation.registerComponent('ChatButtonComponent', () => ChatButton);
+  Navigation.registerComponent('SettingButtonComponent', () => SettingButton);
 }

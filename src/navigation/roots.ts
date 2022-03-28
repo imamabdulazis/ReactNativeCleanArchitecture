@@ -76,7 +76,7 @@ export function setTabsRoot(callback?: () => void) {
           },
           {
             stack: {
-              id: MainTab.search.id,
+              id: MainTab.marketPlace.id,
               children: [
                 {
                   component: {
@@ -99,7 +99,7 @@ export function setTabsRoot(callback?: () => void) {
           },
           {
             stack: {
-              id: MainTab.search.id,
+              id: MainTab.profile.id,
               children: [
                 {
                   component: {
@@ -122,12 +122,12 @@ export function setTabsRoot(callback?: () => void) {
           },
           {
             stack: {
-              id: MainTab.settings.id,
+              id: MainTab.notification.id,
               children: [
                 {
                   component: {
-                    id: Pages.setting.id,
-                    name: Pages.setting.name,
+                    id: Pages.notification.id,
+                    name: Pages.notification.name,
                   },
                 },
               ],
@@ -147,25 +147,15 @@ export function setTabsRoot(callback?: () => void) {
           },
           {
             stack: {
-              id: MainTab.settings.id,
+              id: MainTab.menu.id,
               children: [
                 {
                   component: {
-                    id: Pages.setting.id,
-                    name: Pages.setting.name,
+                    id: Pages.menu.id,
+                    name: Pages.menu.name,
                   },
                 },
               ],
-              options: {
-                bottomTab: {
-                  text: 'Menu',
-                  ...getPlatformTabsIcon(
-                    SFSymbols['line.horizontal.3.decrease'],
-                    SFSymbols['line.horizontal.3.decrease'],
-                    'menu',
-                  ),
-                },
-              },
             },
           },
         ],
