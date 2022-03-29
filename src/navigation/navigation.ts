@@ -1,26 +1,28 @@
 import {Platform} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 import {getStorybookUI} from '@storybook/react-native';
-import {platformNativeColor} from '@components/helpers/colorHelpers';
-import {Pages} from './constants/pages';
-import SettingScreen from '@screens/setting/SettingScreen';
-import ProfileScreen from '@screens/profile/ProfileScreen';
-import SearchScreen from '@screens/search/SearchScreen';
-import HomeScreen from '@screens/home/HomeScreen';
-import LoginScreen from '@screens/login/LoginScreen';
-import SplashScreen from '@screens/splash/SplashScreen';
+
 import {
   PlatformColorsAndroid,
   PlatformColorsIOS,
 } from '@components/common/color';
+import {platformNativeColor} from '@components/helpers/colorHelpers';
+import {Pages} from './constants/pages';
+import {WrappedComponent} from '../hoc';
+
+import SettingScreen from '@screens/Setting/SettingScreen';
+import ProfileScreen from '@screens/Profile/ProfileScreen';
+import SearchScreen from '@screens/Search/SearchScreen';
+import HomeScreen from '@screens/Home/HomeScreen';
+import LoginScreen from '@screens/Login/LoginScreen';
+import SplashScreen from '@screens/Splash/SplashScreen';
 import SearchButton from '@components/general/Button/SearchButton';
 import ChatButton from '@components/general/Button/ChatButton';
-import {WrappedComponent} from '../hoc';
-import NotificationScreen from '../screens/notification/NotificationScreen';
-import SettingButton from '../components/general/Button/SettingButton';
-import MenuScreen from '../screens/menu/MenuScreen';
-import LanguageScreen from '../screens/language/LanguageScreen';
-import MarketPlace from '../screens/marketplace/MarketPlace';
+import NotificationScreen from '@screens/Notification/NotificationScreen';
+import SettingButton from '@components/general/Button/SettingButton';
+import MenuScreen from '@screens/Menu/MenuScreen';
+import LanguageScreen from '@screens/Language/LanguageScreen';
+import MarketPlace from '@screens/Marketplace/MarketPlace';
 
 const StorybookUIRoot = getStorybookUI({
   asyncStorage: null,
