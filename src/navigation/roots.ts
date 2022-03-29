@@ -1,5 +1,3 @@
-import {getPlatformTabsIcon} from '@navigation/helpers/navigationIconHelpers';
-import {SFSymbols} from '@assets/symbols/SFSymbols';
 import {Navigation} from 'react-native-navigation';
 import {Pages} from './constants/pages';
 import {MainTab} from './constants/mainTab';
@@ -80,21 +78,11 @@ export function setTabsRoot(callback?: () => void) {
               children: [
                 {
                   component: {
-                    id: Pages.search.id,
-                    name: Pages.search.name,
+                    id: Pages.marketplace.id,
+                    name: Pages.marketplace.name,
                   },
                 },
               ],
-              options: {
-                bottomTab: {
-                  text: 'Marketlace',
-                  ...getPlatformTabsIcon(
-                    SFSymbols['suitcase.cart'],
-                    SFSymbols['suitcase.cart.fill'],
-                    'storefront',
-                  ),
-                },
-              },
             },
           },
           {
@@ -103,21 +91,11 @@ export function setTabsRoot(callback?: () => void) {
               children: [
                 {
                   component: {
-                    id: Pages.search.id,
-                    name: Pages.search.name,
+                    id: Pages.profile.id,
+                    name: Pages.profile.name,
                   },
                 },
               ],
-              options: {
-                bottomTab: {
-                  text: 'Profile',
-                  ...getPlatformTabsIcon(
-                    SFSymbols['person.circle'],
-                    SFSymbols['person.circle.fill'],
-                    'person-pin',
-                  ),
-                },
-              },
             },
           },
           {
@@ -131,18 +109,6 @@ export function setTabsRoot(callback?: () => void) {
                   },
                 },
               ],
-              options: {
-                bottomTab: {
-                  badge: '10',
-                  animateBadge: true,
-                  text: 'Notifications',
-                  ...getPlatformTabsIcon(
-                    SFSymbols.bell,
-                    SFSymbols['bell.fill'],
-                    'notifications',
-                  ),
-                },
-              },
             },
           },
           {

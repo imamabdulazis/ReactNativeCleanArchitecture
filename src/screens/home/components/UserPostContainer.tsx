@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, TextInput, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
-import {screenDimensions} from '@components/common/commonConsts';
+import {screenDimensions} from '@components/common/commonConst';
 import {Colors} from '@components/common/color';
 import {useTranslation} from 'react-i18next';
 

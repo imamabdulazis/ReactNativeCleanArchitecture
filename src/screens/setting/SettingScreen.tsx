@@ -2,17 +2,28 @@ import React, {useEffect} from 'react';
 import {useTranslation} from 'react-i18next';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {Navigation} from 'react-native-navigation';
-
-import {getPlatformTabsIcon} from '@navigation/helpers/navigationIconHelpers';
-import {SFSymbols} from '@assets/symbols/SFSymbols';
 import {Colors} from '@components/common/color';
 import MainMenuItem from './components/MainMenuItem';
+import {Pages} from '../../navigation/constants/pages';
 
 const SettingScreen = (props: any) => {
   const {componentId} = props;
   const {t} = useTranslation();
 
-  const onPressLanguage = () => {};
+  const onPressLanguage = () => {
+    Navigation.push(componentId, {
+      component: {
+        id: Pages.language.id,
+        name: Pages.language.name,
+        options: {
+          bottomTabs: {
+            visible: false,
+            drawBehind: true,
+          },
+        },
+      },
+    });
+  };
 
   /**
    * Change Language
@@ -24,9 +35,6 @@ const SettingScreen = (props: any) => {
           text: t('Setting & Privacy'),
         },
       },
-      bottomTab: {
-        text: t('Home'),
-      },
     });
   }, [t, componentId]);
 
@@ -34,18 +42,18 @@ const SettingScreen = (props: any) => {
     <View style={styles.container}>
       <ScrollView>
         <View style={styles.headerContent}>
-          <Text style={styles.headerContentTitle}>Preferences</Text>
-          <Text>Customize your experience on Facebook</Text>
+          <Text style={styles.headerContentTitle}>{t('Preferences')}</Text>
+          <Text>{t('Customize your experience on Facebook')}</Text>
         </View>
         <MainMenuItem
           onPress={onPressLanguage}
           icon={'ios-globe-outline'}
-          title={'Language and Region'}
+          title={t('Language and Region')}
         />
         <MainMenuItem
           onPress={() => {}}
           icon={'ios-moon-outline'}
-          title={'Dark Mode'}
+          title={t('Dark Mode')}
         />
       </ScrollView>
     </View>
@@ -56,9 +64,6 @@ SettingScreen.options = () => ({
   topBar: {
     barStyle: 'default',
     hideOnScroll: true,
-  },
-  bottomTab: {
-    ...getPlatformTabsIcon(SFSymbols.house, SFSymbols['house.fill'], 'home'),
   },
 });
 

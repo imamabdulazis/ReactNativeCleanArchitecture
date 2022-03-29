@@ -1,4 +1,4 @@
-import {isIos} from '@components/common/commonConsts';
+import {isIos} from '@components/common/commonConst';
 import {PlatformColor} from 'react-native';
 import {
   Colors,

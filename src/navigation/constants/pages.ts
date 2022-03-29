@@ -31,6 +31,10 @@ export const Pages = {
     id: 'SEARCH_SCREEN',
     name: 'SearchScreen',
   },
+  marketplace: {
+    id: 'MARKETPLACE_SCREEN',
+    name: 'MarketplaceScreen',
+  },
   profile: {
     id: 'PROFILE_SCREEN',
     name: 'ProfileScreen',
@@ -39,6 +43,8 @@ export const Pages = {
     id: 'NOTIFICATION_SCREEN',
     name: 'NotificationScreen',
   },
+
+  //menu screen
   menu: {
     id: 'MENU_SCREEN',
     name: 'MenuScreen',
@@ -46,5 +52,9 @@ export const Pages = {
   setting: {
     id: 'SETTING_SCREEN',
     name: 'SettingScreen',
+  },
+  language: {
+    id: 'LANGUAGE_SCREEN',
+    name: 'LanguageScreen',
   },
 };

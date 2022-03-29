@@ -5,7 +5,7 @@ import FastImage from 'react-native-fast-image';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {setTabsRoot} from '@navigation/roots';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {screenDimensions} from '@components/common/commonConsts';
+import {screenDimensions} from '@components/common/commonConst';
 import {Colors} from '@components/common/color';
 
 const headerSource = require('@assets/images/header-login.jpeg');

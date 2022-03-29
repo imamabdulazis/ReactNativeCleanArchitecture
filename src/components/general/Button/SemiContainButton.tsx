@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {StyleSheet, Text, TouchableHighlight} from 'react-native';
-import {screenDimensions} from '@components/common/commonConsts';
+import {screenDimensions} from '@components/common/commonConst';
 import {Colors} from '@components/common/color';
 
 export default function SemiContainButton({onPress, children}: any) {
