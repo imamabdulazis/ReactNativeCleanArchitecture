@@ -3,12 +3,16 @@ import {StyleSheet, Text, View} from 'react-native';
 
 const GroupScreen = () => {
   return (
-    <View>
-      <Text></Text>
+    <View style={styles.container}>
+      <Text>Group Screen</Text>
     </View>
   );
 };
 
 export default GroupScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
