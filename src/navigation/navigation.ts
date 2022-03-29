@@ -19,6 +19,8 @@ import {WrappedComponent} from '../hoc';
 import NotificationScreen from '../screens/notification/NotificationScreen';
 import SettingButton from '../components/general/Button/SettingButton';
 import MenuScreen from '../screens/menu/MenuScreen';
+import LanguageScreen from '../screens/language/LanguageScreen';
+import MarketPlace from '../screens/marketplace/MarketPlace';
 
 const StorybookUIRoot = getStorybookUI({
   asyncStorage: null,
@@ -142,11 +144,17 @@ export function registerComponent() {
     () => WrappedComponent(SplashScreen),
     () => SplashScreen,
   );
+  /**
+   * Auth Screen and other children
+   */
   Navigation.registerComponent(
     Pages.login.name,
     () => WrappedComponent(LoginScreen),
     () => LoginScreen,
   );
+  /**
+   * Home Screen and other children
+   */
   Navigation.registerComponent(
     Pages.home.name,
     () => WrappedComponent(HomeScreen),
@@ -157,15 +165,39 @@ export function registerComponent() {
     () => WrappedComponent(SearchScreen),
     () => SearchScreen,
   );
+
+  /**
+   * Marketplace Screen and other children
+   */
+  Navigation.registerComponent(
+    Pages.marketplace.name,
+    () => WrappedComponent(MarketPlace),
+    () => MarketPlace,
+  );
+
+  /**
+   * Profile Screen and other children
+   */
+  Navigation.registerComponent(
+    Pages.profile.name,
+    () => WrappedComponent(ProfileScreen),
+    () => ProfileScreen,
+  );
+  /**
+   * Notification Screen and other children
+   */
   Navigation.registerComponent(
     Pages.notification.name,
     () => WrappedComponent(NotificationScreen),
     () => NotificationScreen,
   );
+  /**
+   * Menu Screen and other children
+   */
   Navigation.registerComponent(
-    Pages.profile.name,
-    () => WrappedComponent(ProfileScreen),
-    () => ProfileScreen,
+    Pages.menu.name,
+    () => WrappedComponent(MenuScreen),
+    () => MenuScreen,
   );
   Navigation.registerComponent(
     Pages.setting.name,
@@ -173,9 +205,9 @@ export function registerComponent() {
     () => SettingScreen,
   );
   Navigation.registerComponent(
-    Pages.menu.name,
-    () => WrappedComponent(MenuScreen),
-    () => MenuScreen,
+    Pages.language.name,
+    () => WrappedComponent(LanguageScreen),
+    () => LanguageScreen,
   );
 
   /**

@@ -23,10 +23,12 @@ const resources = {
 
 export type TranslationContextValue = {
   switchLang: (language: string) => void;
+  lang: string;
 };
 
 export const TranslationContext = React.createContext<TranslationContextValue>({
   switchLang: (language: string) => language,
+  lang: 'en',
 });
 
 export const TranslationProvider: React.FC<{}> = ({children}) => {
@@ -59,8 +61,6 @@ export const TranslationProvider: React.FC<{}> = ({children}) => {
     })();
   }, []);
 
-  console.log(lang);
-
   const switchLang = useCallback(
     (language: string) => {
       if (__DEV__) {
@@ -76,7 +76,7 @@ export const TranslationProvider: React.FC<{}> = ({children}) => {
   );
 
   return (
-    <TranslationContext.Provider value={{switchLang}}>
+    <TranslationContext.Provider value={{switchLang, lang}}>
       {children}
     </TranslationContext.Provider>
   );

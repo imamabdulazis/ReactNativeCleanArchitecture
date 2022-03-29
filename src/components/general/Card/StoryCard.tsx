@@ -1,7 +1,7 @@
 import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {windowWidth} from '@components/common/commonConsts';
+import {windowWidth} from '@components/common/commonConst';
 import {Colors} from '@components/common/color';
 
 const StoryCard = ({isCreateStory = false}: any) => {

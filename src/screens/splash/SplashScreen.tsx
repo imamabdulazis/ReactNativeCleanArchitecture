@@ -4,7 +4,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import {NavigationFunctionComponent} from 'react-native-navigation';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Colors} from '@components/common/color';
-import {screenDimensions} from '@components/common/commonConsts';
+import {screenDimensions} from '@components/common/commonConst';
 
 const SplashScreen: NavigationFunctionComponent = () => {
   useEffect(() => {

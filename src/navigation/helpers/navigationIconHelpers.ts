@@ -1,7 +1,7 @@
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {SFSymbols} from 'src/assets/symbols/SFSymbols';
 import {Colors, PlatformColorsAndroid} from '@components/common/color';
-import {isIos} from '@components/common/commonConsts';
+import {isIos} from '@components/common/commonConst';
 
 /**
  * if using different icons between platform

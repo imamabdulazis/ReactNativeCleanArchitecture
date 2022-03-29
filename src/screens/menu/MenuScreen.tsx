@@ -16,11 +16,16 @@ const MenuScreen = (props: any) => {
   const {t} = useTranslation();
 
   const onPressSetting = useCallback(() => {
-    console.log('IMUNnn');
     Navigation.push(componentId, {
       component: {
         name: Pages.setting.name,
         id: Pages.setting.id,
+        options: {
+          bottomTabs: {
+            visible: false,
+            drawBehind: true,
+          },
+        },
       },
     });
   }, [componentId]);
@@ -29,7 +34,7 @@ const MenuScreen = (props: any) => {
     Navigation.mergeOptions(componentId, {
       topBar: {
         title: {
-          text: 'Menu',
+          text: t('Menu'),
         },
         rightButtons: [
           {
@@ -54,6 +59,11 @@ const MenuScreen = (props: any) => {
       },
       bottomTab: {
         text: t('Menu'),
+        ...getPlatformTabsIcon(
+          SFSymbols['line.horizontal.3.decrease'],
+          SFSymbols['line.horizontal.3.decrease'],
+          'menu',
+        ),
       },
     });
   }, [t, componentId, onPressSetting]);
@@ -77,13 +87,6 @@ MenuScreen.options = () => ({
         PlatformColorsAndroid.primaryText,
       ),
     },
-  },
-  bottomTab: {
-    ...getPlatformTabsIcon(
-      SFSymbols['line.horizontal.3.decrease'],
-      SFSymbols['line.horizontal.3.decrease'],
-      'menu',
-    ),
   },
 });
 

@@ -1,4 +1,4 @@
-import {screenDimensions} from '@components/common/commonConsts';
+import {screenDimensions} from '@components/common/commonConst';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import PostCategoryContainer from './PostCategoryContainer';

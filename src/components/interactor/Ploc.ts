@@ -1,6 +1,6 @@
 type Subscription<S> = (state: S) => void;
 
-export abstract class Ploc<S> {
+export abstract class Bloc<S> {
   private internalState: S;
   private listeners: Subscription<S>[] = [];
 
