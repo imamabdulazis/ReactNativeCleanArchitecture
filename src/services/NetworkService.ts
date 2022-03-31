@@ -2,18 +2,21 @@ import NetworkApiClient from './NetworkClient';
 
 function requestAPI(
   url: string,
-  timeOut: number,
-  headers: any,
-  callback: (val: any) => void,
+  params: any,
+  timeOut?: number,
+  callback?: (val: any) => void,
 ) {
-  const apiClient = new NetworkApiClient(url, headers, timeOut);
-  let promise = apiClient.getWithHeadersConfiguration(url, headers, timeOut);
+  const apiClient = new NetworkApiClient(
+    (url = 'https://jsonplaceholder.typicode.com'),
+    (timeOut = 9000),
+  );
+  let promise = apiClient.getWithQueryParamsConfiguration(url, params, timeOut);
   promise.then(
     (result: any) => {
-      callback(result);
+      callback!(result);
     },
-    (error: unknown) => {
-      callback(error);
+    (error: Error) => {
+      callback!(error);
     },
   );
 }
