@@ -1,5 +1,6 @@
+import {LoginDTO} from '../../domain/dto/LoginDTO';
+
 export interface RequestLoginState {
-  kind: 'RequestLoginState';
   params: {};
 }
 
@@ -9,7 +10,7 @@ export interface LoadingLoginState {
 
 export interface SuccessLoginState {
   kind: 'SuccessLoginState';
-  token: string;
+  data: LoginDTO;
 }
 
 export interface ErrorLoginState {
@@ -18,12 +19,11 @@ export interface ErrorLoginState {
 }
 
 export type LoginState =
-  | RequestLoginState
   | LoadingLoginState
   | SuccessLoginState
   | ErrorLoginState;
 
-export const loginInitialState: LoginState = {
-  kind: 'RequestLoginState',
+export const loginInitialState: LoginState & RequestLoginState = {
+  kind: 'LoadingLoginState',
   params: {},
 };

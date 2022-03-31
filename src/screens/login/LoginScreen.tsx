@@ -1,27 +1,42 @@
-import React, {useState} from 'react';
-import {StatusBar, StyleSheet, Text, TextInput, View} from 'react-native';
+import React, {useCallback, useEffect, useState} from 'react';
+import {
+  StatusBar,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import FastImage from 'react-native-fast-image';
 
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import {setTabsRoot} from '@navigation/roots';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {screenDimensions} from '@components/common/commonConst';
 import {Colors} from '@components/common/color';
+import {dependenciesLocator} from '../../core/dependencies/DependenciesLocator';
+import {LoginParamsInterface} from '../../interface';
+import {useBlocState} from '../../hooks/useBlocState';
 
 const headerSource = require('@assets/images/header-login.jpeg');
 
 const LoginScreen = () => {
-  const [email, setemail] = useState('');
-  const [pass, setpass] = useState('');
+  const authBloc = dependenciesLocator.providerAuthBloc();
+  const state = useBlocState(authBloc);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const login = async () => {
-    if (email === 'test' && pass === 'test') {
+  const login = useCallback(() => {
+    let params: LoginParamsInterface = {
+      email,
+      password,
+    };
+    authBloc.requestLogin(params);
+  }, [authBloc, email, password]);
+
+  useEffect(() => {
+    if (state.kind === 'SuccessLoginState') {
       setTabsRoot();
-      await AsyncStorage.setItem('login', 'true');
-    } else {
-      // console.log('Email or password incorrect');
     }
-  };
+  }, [authBloc, state]);
 
   return (
     <View style={styles.container}>
@@ -31,7 +46,7 @@ const LoginScreen = () => {
         <TextInput
           placeholder="Phone number or email"
           style={styles.input}
-          onChangeText={setemail}
+          onChangeText={setEmail}
         />
 
         <View style={styles.divider} />
@@ -39,7 +54,7 @@ const LoginScreen = () => {
         <TextInput
           placeholder="Password"
           style={styles.input}
-          onChangeText={setpass}
+          onChangeText={setPassword}
         />
       </View>
       <View style={styles.centerButton}>

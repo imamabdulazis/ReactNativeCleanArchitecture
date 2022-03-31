@@ -10,16 +10,16 @@ const SplashScreen: NavigationFunctionComponent = () => {
   useEffect(() => {
     (async function () {
       const isLogin = AsyncStorage.getItem('@login');
-
-      if (isLogin !== null) {
-        setTimeout(() => {
-          setTabsRoot();
-        }, 1000);
-      } else {
-        setTimeout(() => {
-          setAuthenticationRoot();
-        }, 1000);
-      }
+      setAuthenticationRoot();
+      // if (isLogin !== null) {
+      //   setTimeout(() => {
+      //     setTabsRoot();
+      //   }, 1000);
+      // } else {
+      //   setTimeout(() => {
+      //     setAuthenticationRoot();
+      //   }, 1000);
+      // }
     })();
   }, []);
 
