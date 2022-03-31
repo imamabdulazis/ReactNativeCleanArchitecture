@@ -20,9 +20,9 @@ import SearchButton from '@components/general/Button/SearchButton';
 import ChatButton from '@components/general/Button/ChatButton';
 import NotificationScreen from '@screens/Notification/NotificationScreen';
 import SettingButton from '@components/general/Button/SettingButton';
-import MenuScreen from '@screens/Menu/MenuScreen';
 import LanguageScreen from '@screens/Language/LanguageScreen';
-import MarketPlace from '@screens/Marketplace/MarketPlace';
+import MarketPlace from '@screens/marketplace/MarketPlace';
+import MenuScreen from '@screens/menu/MenuScreen';
 
 const StorybookUIRoot = getStorybookUI({
   asyncStorage: null,

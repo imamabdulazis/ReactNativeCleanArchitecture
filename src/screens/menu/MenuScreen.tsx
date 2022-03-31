@@ -1,5 +1,8 @@
 import React, {useCallback, useEffect} from 'react';
 import {Text, View} from 'react-native';
+import {useTranslation} from 'react-i18next';
+import {Navigation} from 'react-native-navigation';
+
 import {
   PlatformColorsAndroid,
   PlatformColorsIOS,
@@ -7,9 +10,7 @@ import {
 import {platformNativeColor} from '@components/helpers/colorHelpers';
 import {getPlatformTabsIcon} from '@navigation/helpers/navigationIconHelpers';
 import {SFSymbols} from '@assets/symbols/SFSymbols';
-import {useTranslation} from 'react-i18next';
-import {Navigation} from 'react-native-navigation';
-import {Pages} from '../../navigation/constants/pages';
+import {Pages} from '@navigation/constants/pages';
 
 const MenuScreen = (props: any) => {
   const {componentId} = props;
